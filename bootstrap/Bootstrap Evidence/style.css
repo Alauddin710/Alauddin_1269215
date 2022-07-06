@@ -1,0 +1,42 @@
+/* .jumbotron{
+    background-color:#337ab7;
+    color: #fff;
+}
+div.side-bar{
+    margin-top: 10px;
+    color: #337ab7;
+}
+ul.nav-tabs{
+    border-top: 40px solid #337ab7;
+}
+.search-bar img{
+    margin-top: 20px;
+}
+.search-box .well{
+    background-color: #337ab7;
+    font-weight: 600;
+    color: #fff;
+}
+footer{
+    background-color: #337ab7;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    font-weight: 800;
+} */
+.jumbotron{
+    background-color: rgb(104, 146, 181);
+    color: #fff;
+}
+div.side-bar{
+    margin-top: 10px;
+    color:  #337ab7;
+}
+footer{
+    padding: 20px;
+    background-color: #337ab7;
+    text-align: center;
+    color: #fff;
+}
+
+    

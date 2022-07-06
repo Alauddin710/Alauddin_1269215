@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email login</title>
+</head>
+<body>
+    <!-- <form name="check">
+       
+        <input type="email" name="email" placeholder="Enter your mail number"> <br>
+        <input type="password" name="pass" placeholder="Enter your password"> <br>
+        <input type="button" value="login" onclick="validated()">
+    </form>
+   
+    <script>
+    function validated(){
+        var email = document.check.email.value;
+        var password = document.check.pass.value.length;
+        var pattern = email.search(/^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/);
+        var status = false
+        
+        if(pattern==-1){
+            alert ("You have put a email number")
+            return false;
+        } else{
+            status = true;
+        } if(password<5){
+            alert("You have must be 5 Character pssword")
+            return false
+        } else{
+            status = true;
+        } if(status==true){
+            alert("All input are valid")
+        }
+        
+    }
+    </script> -->
+
+<form name="log">
+    <input type="text" name="email" placeholder="Enter your email number"> <br>
+    <input type="password" name="pass" placeholder="Enter your email password number"> <br>
+    <input type="button" value="login" onclick="validated()">
+    
+</form>
+<script>
+    function validated(){
+        var email = document.log.email.value;
+        var password = document.log.pass.value.length;
+        var pattern = email.search(/^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/)
+        var status = false
+        if(pattern==-1){
+            alert("You have put invalid email number")
+            return false;
+        } else{
+            status = true
+        } if(password<6){
+            alert("You have must be 6 character password")
+            return false
+        } else{
+            status = true
+        } if(status==true){
+            alert("All are input valid")
+        }
+    }
+</script>
+
+</body>
+</html>

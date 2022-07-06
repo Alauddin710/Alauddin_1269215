@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tootip</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <br> <br>
+   <a href="#" id="abc" title="Some information fro the page of about us" data-content="This data content for popover">About us</a>
+   <button class="btn btn-success" data-content="This data content for popover"> click here</button>
+</div>
+    <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+   <script>
+    $(document).ready(function () {
+        $('.btn-success').popover( {title:"My message", placement:"bottom"});
+        $('#abc').popover();
+    });
+   </script>
+
+
+   
+    <!-- <div class="container">
+        <h3>Tooltip Example</h3>
+        <p>Tooltips are not CSS-only plugins, and must therefore be initialized with jQuery: select the specified element and call the tooltip() method.</p>
+        <a href="#" id="abc" title="Hooray!">Hover over me</a>
+      </div> -->
+      
+      <!-- <script>
+      $(document).ready(function(){
+        $('#abc').tooltip();   
+      });
+      </script> -->
+
+
+   
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Evedence</title>
+
+    <script src="script.js"></script>
+</head>
+<body>
+
+    
+    <form name="data">
+        <labe> Name</label> <input type="text" name="name" placeholder="Enter yor name"> <br>
+        <labe>Contact</label> <input type="text" name="phone" placeholder="Enter yor phone number"> <br>
+            Remarks: <br>
+            <textarea name="text" cols="30" rows="10"></textarea> <br>
+            <labe>Sex</label> <br> Male <input type="radio" name="sex" value="Male">
+            Female <input type="radio" name="sex" value="Female"> <br>
+            Selecting Multiple Courses: <br>
+            <label> NT</label><input type="Checkbox" name="check" class="" value="NT">
+            <label> IAD</label><input type="Checkbox" name="check" class="" value="IAD">
+            <label>DDD</label><input type="Checkbox" name="check" class="" value="DDD">
+            <label> ESAD</label><input type="Checkbox" name="check" class="" value="ESAD"> <br>
+            Select location: <br>
+            <select name="location">
+                <option value="" disabled selected> Select one</option>
+                <option value="Banani"> Banani</option>
+                <option value="Dhanmondi"> Dhanmondi</option>
+                <option value="Mirpur">Mirpur</option>
+
+                       </select> <br>
+                <input type="button" name="Submit" value="SEND" onclick="datacollect()">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Iamage switching on Mouse over</h2>
+
+    <script>
+        function func1(){
+            document.sample.src = "tiger.jpg";
+        } function func2(){
+            document.sample.src = "Cat.jpg";
+        } 
+        function func3(){
+            var fast = document.fastname.value;
+            document.getElementById('Show').innerHTML = fast;
+        }
+    </script>
+    <a href="" onmouseover="func1()" onmouseout="func2 ()" > <img src="Cat.jpg" name="sample" alt="" width="400"> </a>
+    <form action="" name=" myform">
+    <input type="text" value=" " id="fastname"> <button type="button" onclick="func3()"> Click here </button>
+</form>
+    <h1 id="show"></h1>
+</body>
+</html>

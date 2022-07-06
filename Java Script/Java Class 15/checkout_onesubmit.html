@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function CheckItOut(form){
+            var yourName = document.folks.info.value;
+            if(yurName==""){
+                alert("You Know your name don\'t you? \n So type it in!")
+                return false;
+            } else{
+                alert("Thanks, "+ yourName +" for sending in your name.");
+                return true;
+            }
+        }
+    </script>
+
+
+    <form name="folks" onsubmit="return CheckItOut(this)" action="Thanks.html">
+        Your name Please:
+        <p> <input type="text" name="info"></p>
+        <input type="submit" value="Click to Validate and Submit">
+
+    </form>
+</body>
+</html>

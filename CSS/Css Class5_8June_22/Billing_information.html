@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+</head>
+<body>
+    <form name="info">
+      First Name:  <input type="text" name="fastname" placeholder="Enter your firs name"> <br>
+      Last Name:  <input type="text" name="lastname" placeholder="Enter your last name"> <br>
+      Gender: <br> 
+      Male <input type="radio" name="Gender" value="Male">
+      Female<input type="radio" name="Gender" value="Female"> <br>
+      languages: <br>
+      Telugu <input type="checkbox" class="lang" value="Telugu">
+      English <input type="checkbox" class="lang" value="English">
+      Hindi <input type="checkbox" class="lang" value="Hindi"> <br>
+     Email:  <input type="text" name="email" placeholder="Enter your email"> <br>
+     Address: <br>
+     <textarea name="address" id="" cols="30" rows="10" placeholder="Enter your full address"></textarea> <br>
+     State: <select name="state">
+         <option disable selected > Choose State </option>
+         <option value="Mirpur Road 1">  Mirpur Road 1</option>
+         <option value="Mirpur Road 2">  Mirpur Road 2</option>
+     </select> <br>
+     Zip: <input type="text" name="zip" placeholder="Enter your zip number"> <br>
+     Credit Card Type: <select name="card">
+         <option disable selected> Choose Credit Card</option>
+         <option value="Choose Credit Card 1"> Choose Credit Card 1</option>
+     </select> <br>
+     <input type="button" onclick="billinginfo()" value="Submit">
+    </form>
+<script>
+    function billinginfo(){
+        var name = document.info.fastname.value;
+        var lastname = document.info.lastname.value;
+        var Gender = document.info.Gender.value;
+        var email = document.info.email.value;
+        var address = document.info.address.value;
+        var state = document.info.state.value;
+        var zip = document.info.zip.value;
+        var card = document.info.card.value;
+
+        
+
+        var result = document.getElementsByClassName("lang")
+        var result1 ="";
+        for(var i=0; i<result.length; i++){
+            if(result[i].checked){
+                result1 +=result[i].value;
+            }
+        }
+
+        var allresult ="";
+        mywin = window.open("","","height=300",width=400,top=100,left=200)
+        allresult += "<p> Name: "+name+" </p>";
+        allresult += "<p> Last Name: "+lastname+" </p>";
+        allresult += "<p> Gender: "+Gender+" </p>";
+        allresult += "<p> Language: "+result1+" </p>";
+        allresult += "<p> Email: "+email+" </p>";
+        allresult += "<p> Address: "+address+" </p>";
+        allresult += "<p> State: "+state+" </p>";
+        allresult += "<p> Zip: "+zip+" </p>";
+        allresult += "<p> Card: "+card+" </p>";
+
+
+        mywin.document.write(allresult)
+    }
+</script>
+
+</body>
+</html>

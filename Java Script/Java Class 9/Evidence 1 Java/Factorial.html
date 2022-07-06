@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factoriral</title>
+</head>
+<body>
+    <h1> Factoriral</h1>
+    <script>
+        // function Factoriral(x){
+        //     if(x==0){
+        //         return ;
+        //     } return x * Factoriral(x-1);
+        // }
+        // document.write(Factoriral(prompt("Enter your number", "")))
+    </script>
+    
+    <script>
+        function calc_factorial(n){
+            if(n==0){
+                return 1;
+            } 
+            return n * calc_factorial(n-1);
+        } 
+        document.write(calc_factorial (prompt("Enter your number")))
+        
+    </script>
+</body>
+</html>

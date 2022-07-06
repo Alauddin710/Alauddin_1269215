@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <script>
+        function validate(){
+            var name = document.regform.fullname.value;
+            var email = document.regform.eamil.value;
+            if(name==""){
+                alert(" You have to  put a name")
+            } else if(email==""){
+                alert("You have to put an email")
+            } else{
+                alert("All are submited")
+            }
+        }
+    </script>
+
+   
+    <form name="regform">
+        Name: <input type="text" name="fullname" placeholder="Enter your name"> <br>
+        Email: <input type="text" name="email" placeholder="Enter your mail"> <br>
+        <!-- Phone: <input type="text" name="Phone" placeholder="Enter your Phone numeber"> <br>
+        Gender: <br> Male: <input type="radio" name="Gender" >
+        Female: <input type="radio" name="Gender" > <br>
+        Language: 
+        <select>
+            <option value=""> Select Language</option>
+            <option value=""> Bangla</option>
+            <option value=""> English</option>
+        </select> <br>
+        About: <br>
+        <textarea placeholder="Write  about yourself" cols="30" rows="2"></textarea> <br> -->
+        <input type="button" onclick="validate()" value="Register">
+        
+    </form>
+
+</body>
+</html>

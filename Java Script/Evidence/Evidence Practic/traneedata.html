@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radion check</title>
+    <script>
+        function check(){
+            // var name = document.info.name.value;
+            // var contact = document.info.contact.value;
+            // var remarks =document.info.remarks.value;
+            // var gender = document.info.gender.value;
+            // var location = document.info.location.value;
+            // var checkoption = document.getElementsByClassName("box");
+            // var result = " ";
+            // for(var i=0; i<checkoption.length; i++){
+            //     if(checkoption[i].checked){
+            //         result +=checkoption[i].value + ", ";
+            //     }
+
+            // }
+            // var allresult;
+            // mywin=window.open("","", "height=300,width=500,top=300,left=500");
+
+            // allresult = "<h2> All my information </h2>";
+            // allresult += "<p> Name: "+name+" </p>";
+            // allresult += "<p> Contact: "+contact+" </p>";
+            // allresult += "<p> Remarks: "+remarks+" </p>";
+            // allresult += "<p> Gender: "+gender+" </p>";
+            // allresult += "<p> Location: "+location+" </p>";
+            // allresult += "<p> Check: "+result+" </p>";
+
+        //    mywin.document.write(allresult)
+            
+            
+        }
+    </script>
+
+</head>
+<body>
+    <form name="info">
+        <!-- Name: <input type="text" name="name" placeholder="Enter your name"> <br>
+        Contact: <input type="text" name="contact" placeholder="Enter your contact number"><br>
+        Remarks: <br>
+        <textarea name="remarks" cols="30" rows="10" placeholder="Enter your remarks"> Remarks</textarea> <br>
+        Sex: <br>
+        Male <input type="radio" name="gender" value="Male">
+        Female <input type="radio" name="gender" value="Female"> <br>
+
+        Courses: <br>
+        NT<input type="checkbox" class="box" value="NT">
+        IAD<input type="checkbox" class="box" value="IAD">
+        DDD<input type="checkbox" class="box" value="DDD">
+        ESAD<input type="checkbox" name="box" value="ESAD"> <br>
+        Select location: <br>
+        <select name="location">
+            <option value="" hidden>Select one</option>
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="mirpur">mirpur</option>
+        </select> <br>
+        <input type="button"  onclick="check()" value="Submit">
+    </form>  -->
+
+    <form name="info">
+        Name <br> <input type="text" name="name" placeholder="Enter yor name"> <br>
+       Contact <br> <input type="text" name="contact" placeholder="Enter your contact number"> <br>
+       Remarks <br> <textarea name="remarks" id="" cols="30" rows="10"></textarea> <br>
+
+       Gender <br> 
+       Male<input type="radio" name="Gender" value="Male">
+       Female<input type="radio" name="Gender" value="Female"> <br>
+       Courses <br> 
+       NT <input type="checkbox" class="course" value="NT">
+       SSD <input type="checkbox" class="course" value="SDD">
+       TTT<input type="checkbox" class="course" value="TTT">
+       <input type="button" value="Submit" onclick="traineedata()">
+    </form>
+<script>
+    function traineedata(){
+        var name = document.info.name.value;
+        var contact = document.info.contact.value;
+        var remarks = document.info.remarks.value;
+        var courseName = document.getElementsByClassName("course")
+        var result = "";
+        for(var i=0; i<courseName.length; i++){
+            if(courseName[i].checked){
+                result +=courseName[i].value +" ,";
+            }
+            
+        }
+        var allresult = "<h1>All my information</h1>"
+        mywin = window.open("","","height=300",width=500,top=100,left=100)
+        allresult += "<p> Name:"+name+" </p>"
+        allresult += "<p> Contact:"+ contact +" </p>"
+        allresult += "<p> Remarks:"+ remarks +" </p>"
+        allresult += "<p> Result:"+ result +" </p>"
+        
+        mywin.document.write(allresult)
+    }
+</script>
+</body>                                                                                                                                                                                                                                                                                                                                                                     
+</html>

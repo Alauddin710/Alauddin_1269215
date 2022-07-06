@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Data Entry Form</h1>
+    <form name="info">
+        Students ID: <input type="text" name="id" placeholder="Enter yor Students ID"> <br>
+       Name: <input type="text" name="name" placeholder="Enter your Name"> <br>
+       Course: <br>
+       <select name="option" >
+           <option value="Select Course" hidden > Select Course</option>
+           <option value="Computer" > Computer</option>
+       </select> <br>
+       <input type="button" value="Submit" onclick="studentsdata()">
+       <input type="button" value="close" onclick="mywin.close()">
+    </form>
+
+    <script>
+        function studentsdata(){
+            var id = document.info.id.value;
+            var name = document.info.name.value;
+            var option = document.info.option.value;
+            var allresult = "<h1> All my information </h1>"
+            mywin = window.open("","","height=300,width=500,top=100,left=200")
+            allresult += "<p>ID: "+id+" </p>"
+            allresult += "<p>Name: "+name+" </p>"
+            allresult += "<p>Course: "+option+" </p>"
+            
+            mywin.document.write(allresult);
+        }
+    </script>
+</body>
+</html>

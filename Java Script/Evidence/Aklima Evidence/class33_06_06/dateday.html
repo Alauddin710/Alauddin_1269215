@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	
+
+	<script type="text/javascript">
+		function showdd(){
+			var mydate = document.myform.mydate.value;
+			alert(mydate);
+			var d = new Date(mydate);
+			// alert(d);
+			var day=["Sunday","Monday","Tuesday","Wedniseday","Thursday","Friday","Saturday"];
+			var my=day[d.getDay()];
+			// aekhane d.getday hocce array er index
+			alert(my);
+			// alert(day[d.getDay()]); ak line kora jae
+
+
+		}
+	</script>
+
+	<form name="myform">
+		<input type="date" name="mydate"><br>
+		<input type="button"  value="SHOW Day" name="" onclick="showdd()">
+	</form>
+	
+</body>
+</html>

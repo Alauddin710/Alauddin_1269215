@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>split</title>
+</head>
+<body>
+    <script>
+        //String.spit()
+
+        var splitThis = "She has two important isssues.";
+        //var stringer4 = splitThis.split(/two important/i);
+        var stringer4 = splitThis.split(/two/i);
+        //var stringer4 = splitThis.split(/     /i);
+        //alert(stringer4[0]);
+
+        for (var i in stringer4){
+            document.write(stringer4[i] + "<br>");
+        }
+    </script>
+</body>
+</html>

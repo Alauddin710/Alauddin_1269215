@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function subMit(){
+		var name = document.login.username.value.length;
+		var password = document.login.pass.value.length;
+
+		var status= false;
+		if(name<6){
+			alert("Name is at least 6 characters long");
+			return false;
+		}else{
+			status = true;
+		}
+		if(password>8){
+			alert("Password is maximum 8 characters long");
+			return false;
+		}else{
+			status = true
+		}
+		if(status==true){
+			alert("All are Validated");
+		}
+		}
+		
+	</script>
+
+	<form name="login">
+		<input type="text" name="username" value="" placeholder="Enter Your user name"><br>
+		<input type="password" name="pass" value=""><br>
+		<input type="button" name="submit" value="SUBMIT" onclick="subMit()">
+	</form>
+	
+</body>
+</html>
