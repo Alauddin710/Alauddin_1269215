@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<?php 
+//kono error bondho korar jonno isset ta babohar hoi
+if(isset($_POST['submit'])){
+
+//echo $_POST['mynum'];
+$guess=150;
+if($_POST['mynum']==$guess){
+    echo "Congratulations!";
+} elseif(abs($guess-$_POST['mynum'])<10){
+    echo"Your are very close"; // akane abs function ta sudu postive number dekabe
+
+}
+
+
+else{
+    echo "Sorry";
+}
+}
+?>
+
+    <h1>Gues the number</h1>
+    <form action="" method="post">
+        <input type="text" name="mynum" placeholder="Gues the number">
+        <input type="submit" name="submit" value="CHECK">
+    </form>
+</body>
+</html>
+
