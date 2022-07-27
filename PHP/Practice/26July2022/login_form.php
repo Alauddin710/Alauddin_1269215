@@ -9,7 +9,7 @@
 <body>
 
 <?php 
-if(isset($_POST['submit'])){
+if(isset($_POST['R'])){
 
 // echo $_POST['login']. "<br>";
 // echo $_POST['email'];
