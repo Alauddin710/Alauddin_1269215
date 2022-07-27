@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <?php include("header.php"); ?>
 <?php //include("headerd.php");এই ভাবে যদি ফাইল নেম ভূল হয় তাহলে শুধু ্ এই পেজ বাদে সব পেজ দেখাবে requer ("headerd.php"); ভূল হয় তাহলে কোন পেজ দেখাবে না ইরর দেখাবে ?>
@@ -9,6 +10,13 @@
 <?php include_once"menu.php";?>
 <?php //include "menu.php"; এখানে "" ব্যবহার করা যায় আবার () ব্যবহার করা যায়। ?>
 <?php //include "menu.php";?>
+=======
+<?php include("header.php"); ?>
+
+<?php include_once"menu.php";
+?>
+<?php include_once"menu.php";?>
+>>>>>>> 2921271befc5fccb316a2072cb52aa9eaaa61621
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut vel officia similique ratione consectetur eveniet quae temporibus perspiciatis eos ullam esse, assumenda dolor animi sapiente soluta expedita, delectus dolorem sequi.</p>
 

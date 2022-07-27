@@ -9,8 +9,9 @@
 <body>
 
 <?php 
-//kono error bondho korar jonno isset ta babohar hoi
+
 if(isset($_POST['submit'])){
+
 
 //echo $_POST['mynum'];
 $guess=150;
