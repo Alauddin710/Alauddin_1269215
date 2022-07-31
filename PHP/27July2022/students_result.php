@@ -3,7 +3,7 @@ class student{
     // public $id;
     // public $name;
     // public $batch;
-    // public $lines;
+    public $lines;
     public function __construct()
     {
         $lines= file('results.txt');
