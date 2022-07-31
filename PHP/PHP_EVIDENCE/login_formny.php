@@ -46,7 +46,8 @@ if(isset($_POST['submit'])){
 
     <h1>Login Form</h1>
     <form action="" method="POST">
-        <input type="text" name="login" value="<?php if(isset($_POST['login'])) echo $_POST['login']; ?>" placeholder="Enter your login name"> <br>
+        <input type="text" name="login" value="<?php if(isset($_POST['login'])) echo $_POST['login']; ?>" placeholder="Enter your login name"> <br> 
+        <!-- valuer modde ata babohar kora hoice searh vare ja thakbe seta stir thakar jonno -->
         <input type="text" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" placeholder="Enter your email number"> <br>
         <input type="submit" name="submit" value="CHECK">
     </form>
