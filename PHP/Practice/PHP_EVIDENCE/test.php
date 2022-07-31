@@ -1,13 +1,10 @@
 <?php 
 
-class simpleClass{
-    public $var= "Hello world";
-    public function sayHello(){
-        echo $this->var;
-    }
-}
-  $obj= new simpleClass();
-  $obj->sayHello();
+$array = array("multi"=>array("dimensional"=>array ("array"=>"foo")));
+
+echo "<pre>";
+var_dump($array["multi"]["dimensional"]["array"]);
+
     ?> 
     
 
