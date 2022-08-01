@@ -4,10 +4,10 @@
 
 
 class student{
-    public $id;
-    public $name;
-    public $batch;
-    public $lines;
+    // public $id;
+    // public $name;
+    // public $batch;
+    // public $lines;
     public function __construct(){
         $lines = file('results.txt');
         $this->lines= $lines;
