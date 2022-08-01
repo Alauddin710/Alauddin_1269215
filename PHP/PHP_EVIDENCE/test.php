@@ -1,3 +1,32 @@
+<?php 
+class students{
+    // public $id;
+    // public $name;
+    // public $batch;
+    // public $result;
+    // public $lines;
+    public function __construct()
+    {
+        $lines= file('res.txt');
+        $this->line= $lines;
+    }
+    public function resultF($sid){
+        foreach($this->line as $line){
+            list($id, $name, $batch, $result)= explode(",", $line);
+            if($id==$sid){
+                
+                echo "ID: $id <br>";
+                echo "Name: $name <br>";
+                echo "Batch: $batch <br>";
+                echo "Result: $result <br>";
+            }    
+        }
+        
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +36,19 @@
     <title>Document</title>
 </head>
 <body>
+
     <?php 
-    
+    if(isset($_POST['submit'])){
+    $id = $_POST['id'];
+    $std= new students();
+   echo $std->resultF($id);
+}
     ?>
-<form action="">
-    <input type="text" name="name" placeholder="Enter your email name"> <br>
-    <input type="text" name="email" placeholder="Enter your email number"> <br>
-    <input type="text" >
-</form>
+
+    <h1>Students Result</h1>
+    <form action="" method="POST">
+        <input type="text" name="id">
+        <input type="submit" name="submit" value="Search">
+    </form>
 </body>
 </html>
