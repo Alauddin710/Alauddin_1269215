@@ -1,8 +1,6 @@
 <?php 
 valiDate();
 
-
-
 function valiDate(){
     $_POST['submit'];
     $login= $_POST['login'];
