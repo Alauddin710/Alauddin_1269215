@@ -6,7 +6,7 @@ $results= array(
 );
 
 foreach($results as $student){
-  list($id, $name, $mcq, $desc, $evd) = array_values($student); // sudu value golo print kore
+  list($id, $name, $mcq, $desc, $evd) = array_values($student); //  sudu value golo print kore
   if($mcq+$desc>=70 && $evd>=30){
 
     echo " ID: $id  Name: $name Written " . ($mcq+$desc) . "Result: Pass <br>";
@@ -14,4 +14,5 @@ foreach($results as $student){
     echo " ID: $id  Name: $name Written " . ($mcq+$desc) . "Result: Fail <br>";
   }
 }
+
 ?>
