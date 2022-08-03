@@ -10,6 +10,6 @@ echo $output['basename'];
 echo "<br>";
 echo$output['filename'];
 echo "<br>";
-echo $output['extention'];
+echo $output['extension'];
 
 ?>
