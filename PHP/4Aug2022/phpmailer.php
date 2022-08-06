@@ -8,13 +8,12 @@
 </head>
 <body>
 <?php 
-extract($_POST); //extract mane holo sob gulo aksate asbe
+extract($_POST); //extract mane holo nicer form name gulo aksate asbe
 $to= "aloalauddin956@gmail.com";
 if(mail($email, $subject, $message)){
     echo " Sent successfully";
 }
 ?>
-
 
     <h2> Contact with Us</h2>
     <form action="" method="POST">
