@@ -1,4 +1,6 @@
 <?php 
-$string = " Rahim's amount is bigger > than Karim's. Rahim & Karim ";
+$string = "Rahim's amount is bigger > than Karim's. Rahim & Karim";
 echo htmlentities($string, ENT_QUOTES);
+
+//অক্ষরকে সত্তায় রূপান্তর করা প্রায়শই ব্রাউজারগুলিকে এটিকে HTML উপাদান হিসাবে ব্যবহার করা থেকে বিরত রাখতে ব্যবহৃত হয়। যখন ব্যবহারকারীদের আপনার হোমপেজে ইনপুট প্রদর্শনের অ্যাক্সেস থাকে তখন কোড চালানো থেকে বিরত রাখতে এটি বিশেষভাবে কার্যকর হতে পারে।
 ?>
