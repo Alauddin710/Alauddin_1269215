@@ -1,7 +1,7 @@
 <?php 
 echo time();
 $time= time();
-$result= getdate(1659865384);
+$result= getdate(1659865384); //ata dara amra array akare pai mash, bosor, din, etc;
 echo "<pre>";
 //print_r($result);
 

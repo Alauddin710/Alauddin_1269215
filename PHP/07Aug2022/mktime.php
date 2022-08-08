@@ -1,5 +1,6 @@
 <?php 
-echo mktime(2022);
+echo mktime(2022); 
+$time = mktime(06,00,10, 1,1,2022); // akta gotona jakhon ghotbe sei time ta abong je projonto time ta ber korbo sei date ta dite hobe;
 echo "<br>";
 $time = mktime(06,00,10,1,1,2022);
 echo date("d-m-y", $time)
