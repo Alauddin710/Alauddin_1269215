@@ -1,0 +1,1 @@
+<?php    echo (checkdate(4,31,2010) ? 'Valid' : 'Invalid');   ?>
