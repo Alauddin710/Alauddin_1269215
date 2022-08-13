@@ -15,7 +15,7 @@ function valiDate(){
     }if($login==""){
         echo " Please Enter your login name";
     } elseif(strlen($login)>8 || strlen($login)<4){
-        echo "Login name invalid <br>";
+        echo "Login name must be 4 to 8 letters <br>";
     }else{
         $validlogin=1; //set login name valid
     } if($email==""){
