@@ -1,0 +1,60 @@
+
+
+
+
+
+
+
+
+## All columns from a table ###
+select * from employees;
+
+
+
+Setting environment for using XAMPP for Windows.
+B3@DESKTOP-SGIN175 e:\xampp
+# mysql -h localhost -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.092 sec)
+
+MariaDB [(none)]> create database wdpf51
+    -> ;
+Query OK, 1 row affected (0.028 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
+| wdpf51             |
++--------------------+
+6 rows in set (0.001 sec)
+
+MariaDB [(none)]> use wdpf51;
+Database changed
+MariaDB [wdpf51]>
+
+
+
