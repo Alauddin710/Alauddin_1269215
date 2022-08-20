@@ -7,21 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>File send to text</h3>
-    <form action="" method="post">
-        <input type="text" name="file"> <br>
+    <h3>Php to text File read</h3>
+    <form action="" method="POST">
+        <input type="text" name="text" placeholder="Enter your name"> <br>
         <input type="submit" name="submit" value="Send">
     </form>
 
-    <?php    
-     $data = $_POST['file'];
-     $fh = fopen("text.txt", 'a');
+    <?php 
+    $data= $_POST['text'];
+    $fh = fopen($fh, $data);
 
-    fwrite($fh, $data);
-
-    fclose($fh);
-
-    // $_POST['submit'];
+    
     ?>
 </body>
 </html>
