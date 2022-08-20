@@ -4,7 +4,6 @@ $receive= $_POST['id'];
 $st1= new students;
 $output= $st1->results($receive);
 echo $output;
-
 }
 class students{
     public function __construct()

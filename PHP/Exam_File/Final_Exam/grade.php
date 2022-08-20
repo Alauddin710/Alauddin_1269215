@@ -5,7 +5,6 @@
 $_POST['submit'];
 $mark=$_POST['number'];
 
-
 if($mark>=90 && $mark<=100){
 echo "The result is A+";
  } elseif($mark>=80 && $mark<=89){
@@ -14,10 +13,11 @@ echo " The result is A";
     echo " The result is B";
 }elseif($mark>=40 && $mark<=59){
         echo " The result is D";
+}elseif($mark==null){
+    echo "Error number";
 }elseif($mark>=101){
-    echo "Outside result number";
-}elseif(!$mark==""){
-    echo "Iput your result number";
+    echo "Input Your number 40 to 100";
+    
 }
 else{
     echo "The result is Fail";

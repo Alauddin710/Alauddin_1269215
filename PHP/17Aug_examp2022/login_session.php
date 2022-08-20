@@ -22,7 +22,7 @@
         if ($email=="") {
             $errors[]="Email must be filld up";
         }
-        if (strlen($login)>8 || strlen($login<4)) {
+        if (strlen($login)>8 || strlen($login)<4) {
             $errors[] = "Login must be 4 to 8";
         }
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -35,13 +35,13 @@
             echo "";
             foreach($errors as $err){
                 echo "$err <br>";
-            }
+            } echo "<br>";
         } else{
             session_start();
             $_SESSION['login']= $login;
             $_SESSION['email']= $email;
-            echo "Login Successful";
-            echo "<a href=\"home.php\"></a>";
+            echo "Login Successful <br>";
+            echo "<a href=\"session_home.php\">Home Page</a>";
         }
     }
 

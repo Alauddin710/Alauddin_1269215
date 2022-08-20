@@ -2,34 +2,35 @@
 <?php 
 if(isset($_POST['submit'])){
 
-$recive= $_POST['number'];
-$output= new students();
-echo $output->results($recive);
+    $numbers = $_POST['id'];
+    $result = new students();
+    $output = $result->results($numbers);
+    echo $output;
+
 }
 class students{
     public function __construct()
     {
-        $lines= file("results.txt");
-        $this->line = $lines;
-    } 
+        $files= file('result.txt');
+        $this->file=$files;
+    }
     public function results($sid){
-        foreach($this->line as $line){
-            list($id, $name, $batch, $result)= explode(",", $line);
+        
+        foreach($this->file as $line){
+            list($id, $name, $batch, $result)= explode("," ,$line);
             if($id==$sid){
-                echo "ID: $id <br>";
+                echo "Id: $id <br>";
                 echo "Name: $name <br>";
                 echo "Batch: $batch <br>";
                 echo "Result: $result <br>";
             }
-        } 
+        }
+        
     }
+    
 }
 
-
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,9 +41,8 @@ class students{
     <title>Document</title>
 </head>
 <body>
-    <h3>Students Result</h3>
     <form action="" method="POST">
-        <input type="text" name="number" placeholder="Enter your id number"> <br>
+        <input type="text" name="id" placeholder="Enter your id number"><br>
         <input type="submit" name="submit" value="Send">
     </form>
 </body>
