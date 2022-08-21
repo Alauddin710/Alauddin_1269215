@@ -6,12 +6,22 @@ $results= array(
 
 );
 
+// foreach($results as $result){
+//     list($id, $name, $mcq, $des,$eve)= array_values($result);
+//     if($mcq+$des>=70 && $eve>=30){
+//         echo " ID: $id Name: $name Written " .($mcq+$des). " Resutl: Pass <br>";
+//     }else{
+//         echo " ID: $id Name: $name Written " .($mcq+$des). " Resutl: Fail <br>";
+//     }
+// }
+
 foreach($results as $result){
-    list($id, $name, $mcq, $des,$eve)= array_values($result);
-    if($mcq+$des>=70 && $eve>=30){
-        echo " ID: $id Name: $name Written " .($mcq+$des). " Resutl: Pass <br>";
+    list($id, $name, $mcq, $desc, $evd)= array_values($result);
+    if($mcq+$desc>=70 && $evd>=30){
+        echo " ID: $id Name: $name written: " .($mcq+$desc). " Result: Pass <br>";
     }else{
-        echo " ID: $id Name: $name Written " .($mcq+$des). " Resutl: Fail <br>";
+        echo " ID: $id Name: $name written: " .($mcq+$desc). " Result: Fail <br>";
+
     }
 }
 
