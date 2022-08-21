@@ -61,3 +61,8 @@ MariaDB [wdpf51]>
 
 
 CREATE TABLE products ( id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY, sku CHAR(8) NOT NULL, name VARCHAR(35) NOT NULL, price DECIMAL(6,2)) ENGINE=MyISAM;
+
+21/08/22
+INSERT INTO students (student_id,student_name,student_email,student_phone) VALUES('1001','Arif','arif@gmail.com','01743612710')
+
+DELETE FORM students WHERE student_id=1001;
