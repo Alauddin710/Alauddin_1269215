@@ -1,4 +1,5 @@
-<?php include_once("dbconfig.php"); ?>
+<?php include_once("dbconfig.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,23 +21,23 @@
 <div class="container">
         <table class="table table-striped">
             <tr>    
-                <th>ID</th>
-                <th> Student Name</th>
-                <th>Student Email</th>
-                <th>Student phone</th>                
+                <th>Number</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>                
             </tr>
             
             <?php
 
-                $sql = "SELECT * FROM students";
+                $sql = "SELECT * FROM employees";
                 $result = $db->query($sql);
                 while($data = $result->fetch_assoc()){
                     ?>
                     <tr>
-                        <td><?php echo $data['student_id']; ?></td>
-                        <td><?php echo $data['student_name']; ?></td>
-                        <td><?php echo $data['student_email']; ?></td>
-                        <td><?php echo $data['student_phone']; ?></td>
+                        <td><?php echo $data['employeeNumber']; ?></td>
+                        <td><?php echo $data['firstName']; ?></td>
+                        <td><?php echo $data['lastName']; ?></td>
+                        <td><?php echo $data['email']; ?></td>
                     </tr>
                 <?php } ?>
 
