@@ -1,0 +1,1 @@
+INSERT INTO `users`(`id`, `name`, `email`, `password`) VALUES ('','amzad','amzad@gmail.com',sha1('abcd123'));
