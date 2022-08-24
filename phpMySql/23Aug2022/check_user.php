@@ -2,7 +2,7 @@
 include_once('dbconfig.php');
 // echo $email=$_POST['email'];
 // echo $pass =$_POST['pass'];
-$email=$_POST['email'];
+ $email=$_POST['email'];
  $pass =$_POST['pass'];
 echo "<br>";
 $pass = sha1($pass);
