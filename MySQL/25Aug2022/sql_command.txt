@@ -1,0 +1,262 @@
+create user 'dipu'@'localhost' identified by 'abcd';
+RENAME user 'amzad'@'localhost' TO 'amzad'@'localhost';
+upadate
+
+
+
+Setting environment for using XAMPP for Windows.
+B3@DESKTOP-SGIN175 e:\xampp
+# mysql -h localhost -u dipu -p
+Enter password: ****
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 153
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| test               |
+| wdpf51             |
++--------------------+
+3 rows in set (0.000 sec)
+
+MariaDB [(none)]> exit
+Bye
+
+B3@DESKTOP-SGIN175 e:\xampp
+# mysql -h localhost -u dipu -p
+Enter password: ****
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 154
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> grant insert on wdpf51. * to 'dipu'@'localhost';
+ERROR 1044 (42000): Access denied for user 'dipu'@'localhost' to database 'wdpf51'
+MariaDB [(none)]> exit
+Bye
+
+B3@DESKTOP-SGIN175 e:\xampp
+# mysql -u dipu -p
+Enter password: ****
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 165
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| test               |
+| wdpf51             |
++--------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [(none)]> use wdpf51;
+Database changed
+MariaDB [wdpf51]> describe products;
++--------------------+---------------+------+-----+---------+-------+
+| Field              | Type          | Null | Key | Default | Extra |
++--------------------+---------------+------+-----+---------+-------+
+| productCode        | varchar(15)   | NO   | PRI | NULL    |       |
+| productName        | varchar(70)   | NO   |     | NULL    |       |
+| productLine        | varchar(50)   | NO   | MUL | NULL    |       |
+| productScale       | varchar(10)   | NO   |     | NULL    |       |
+| productVendor      | varchar(50)   | NO   |     | NULL    |       |
+| productDescription | text          | NO   |     | NULL    |       |
+| quantityInStock    | smallint(6)   | NO   |     | NULL    |       |
+| buyPrice           | decimal(10,2) | NO   |     | NULL    |       |
+| MSRP               | decimal(10,2) | NO   |     | NULL    |       |
++--------------------+---------------+------+-----+---------+-------+
+9 rows in set (0.008 sec)
+
+MariaDB [wdpf51]> INSERT INTO products VALUES (NULL, 'sh201', 'Blue shirt', '','500');
+ERROR 1142 (42000): INSERT command denied to user 'dipu'@'localhost' for table 'products'
+MariaDB [wdpf51]> exit
+Bye
+
+B3@DESKTOP-SGIN175 e:\xampp
+# mysql -u dipu -p
+Enter password: ****
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 168
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| test               |
+| wdpf51             |
++--------------------+
+3 rows in set (0.000 sec)
+
+MariaDB [(none)]> use wdpf51;
+Database changed
+MariaDB [wdpf51]> show tables;
++------------------+
+| Tables_in_wdpf51 |
++------------------+
+| customers        |
+| employees        |
+| offices          |
+| orderdetails     |
+| orders           |
+| payments         |
+| productlines     |
+| products         |
+| students         |
+| users            |
++------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [wdpf51]> describe products;
++--------------------+---------------+------+-----+---------+-------+
+| Field              | Type          | Null | Key | Default | Extra |
++--------------------+---------------+------+-----+---------+-------+
+| productCode        | varchar(15)   | NO   | PRI | NULL    |       |
+| productName        | varchar(70)   | NO   |     | NULL    |       |
+| productLine        | varchar(50)   | NO   | MUL | NULL    |       |
+| productScale       | varchar(10)   | NO   |     | NULL    |       |
+| productVendor      | varchar(50)   | NO   |     | NULL    |       |
+| productDescription | text          | NO   |     | NULL    |       |
+| quantityInStock    | smallint(6)   | NO   |     | NULL    |       |
+| buyPrice           | decimal(10,2) | NO   |     | NULL    |       |
+| MSRP               | decimal(10,2) | NO   |     | NULL    |       |
++--------------------+---------------+------+-----+---------+-------+
+9 rows in set (0.052 sec)
+
+MariaDB [wdpf51]> describe students;
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| student_id    | mediumint(10) | NO   | PRI | NULL    | auto_increment |
+| student_name  | varchar(30)   | NO   |     | NULL    |                |
+| student_email | varchar(30)   | NO   |     | NULL    |                |
+| student_phone | varchar(40)   | NO   |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+4 rows in set (0.010 sec)
+
+MariaDB [wdpf51]> select * from students;
++------------+--------------+-----------------+---------------+
+| student_id | student_name | student_email   | student_phone |
++------------+--------------+-----------------+---------------+
+|          1 | alo          | alo@gmail.com   | 01743612710   |
+|          2 | razu         | razu@gmail.com  | 01743612711   |
+|          3 | pintu        | pintu@gmail.com | 01743612712   |
++------------+--------------+-----------------+---------------+
+3 rows in set (0.000 sec)
+
+MariaDB [wdpf51]> exit
+Bye
+
+B3@DESKTOP-SGIN175 e:\xampp
+# mysql -h localhost -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 169
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> grant select on wdpf51.* to 'dipu'@'localhost';
+Query OK, 0 rows affected (0.037 sec)
+
+MariaDB [(none)]> grant insert on wdpf51.* to 'dipu'@'localhost';
+Query OK, 0 rows affected (0.034 sec)
+
+MariaDB [(none)]> exit
+Bye
+
+B3@DESKTOP-SGIN175 e:\xampp
+# mysql -u dipu -p
+Enter password: ****
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 218
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| test               |
+| wdpf51             |
++--------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [(none)]> use wdpf51;
+Database changed
+MariaDB [wdpf51]> show tables;
++------------------+
+| Tables_in_wdpf51 |
++------------------+
+| customers        |
+| employees        |
+| offices          |
+| orderdetails     |
+| orders           |
+| payments         |
+| productlines     |
+| products         |
+| students         |
+| users            |
++------------------+
+10 rows in set (0.000 sec)
+
+MariaDB [wdpf51]> describe students;
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| student_id    | mediumint(10) | NO   | PRI | NULL    | auto_increment |
+| student_name  | varchar(30)   | NO   |     | NULL    |                |
+| student_email | varchar(30)   | NO   |     | NULL    |                |
+| student_phone | varchar(40)   | NO   |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+4 rows in set (0.006 sec)
+
+MariaDB [wdpf51]> insert into students values(null,'anu','anu@gmail.com','0146578758');
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [wdpf51]> select * from students;
++------------+--------------+-----------------+---------------+
+| student_id | student_name | student_email   | student_phone |
++------------+--------------+-----------------+---------------+
+|          1 | alo          | alo@gmail.com   | 01743612710   |
+|          2 | razu         | razu@gmail.com  | 01743612711   |
+|          3 | pintu        | pintu@gmail.com | 01743612712   |
+|          4 | anu          | anu@gmail.com   | 0146578758    |
++------------+--------------+-----------------+---------------+
+4 rows in set (0.000 sec)
+
+MariaDB [wdpf51]>
+
+
+
+Revok//
+revoke insert on wdpf51.* FROM 'dipu'@'localhost';
