@@ -1,3 +1,4 @@
+
 CREATE VIEW product_info_view AS
 SELECT p.id,m.name,p.name,p.price FROM manufacturer m, product p WHERE m.id=p.manufacturer_id AND p.price>5000;
 
