@@ -1,0 +1,31 @@
+
+// serarching time janar jonno; full text
+SELECT productName,productDescription FROM products WHERE MATCH(productDescription) AGAINST ('Wheels');
+
+
+SELECT productName,productDescription FROM products WHERE productDescription LIKE '%Wheels%';
+
+*****exprot command*****
+ mysqldump -u root -p wdpf51 > E:\wdpf51_dump.sql
+
+**iport file command****
+mysql -u root -p wdpf51_blank < E:\wdpf51_dump.sql
+
+
+out file
+SELECT * INTO OUTFILE "E:\student_info.txt"
+ FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n'
+ FROM wdpf51.student_info;
+
+ *****excel File*****
+ SELECT * INTO OUTFILE "E:\student_info.xls"
+ FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n'
+ FROM wdpf51.student_info;
+
+
+
+
+LOAD DATA INFILE "sales.txt"
+INTO TABLE sales (id, client_id, order_time, sub_total,shipping_cost total_cost)
+SET added_to_table = CURRENT_TIMESTAMP
+ 
