@@ -2,13 +2,26 @@
 $db = new mysqli('localhost','root','','wdpf51_exam');
 ?>
 
+
 <?php 
+// delete
 if(isset($_POST['submit'])){
 $id= $_POST['manu_id'];
 $sql= "DELETE FROM manufacturer WHERE id = '$id'";
 $db->query($sql);
 if($db->affected_rows>0){
     echo "Deleted";
+}
+}
+?>
+<?php 
+// Entry
+if(isset($_POST['manufacturer_submit'])){
+  extract($_POST);
+$sql ="CALL add_manufacturer('$manu_nm','$manu_add','$manu_ph')";
+$db->query($sql);
+if($db->affected_rows>0){
+    echo "Added";
 }
 }
 ?>
@@ -30,5 +43,14 @@ if($db->affected_rows>0){
     </select>
     <input type="submit" name="submit" value="DELETE">
     </form>
-    
+
+    <h1>Manufacturer Entry</h1>
+    <form action="" method="post">
+      <input type="text" name="manu_nm" placeholder=" Manufacturer name"><br>
+      <input type="text" name="manu_add" placeholder="Enter address"><br>
+      <input type="text" name="manu_ph" placeholder="Manufacturer phone"><br>
+      <input type="submit" name="manufacturer_submit" value="SAVE Manufcturer">
+    </form>
+    <br>
+    <a href="products.php">Show Products</a>
     

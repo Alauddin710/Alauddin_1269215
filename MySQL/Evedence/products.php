@@ -28,3 +28,5 @@ $db = new mysqli('localhost','root','','wdpf51_exam');
     
     
 </table>
+<br>
+<a href="manufacturers.php">Show Manufacturer</a>
