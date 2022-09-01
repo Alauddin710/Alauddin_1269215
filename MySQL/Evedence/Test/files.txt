@@ -1,0 +1,8 @@
+CREATE view*****
+
+CREATE VIEW product_info_view AS
+SELECT p.id, p.name, p.price,m.name as manufacturer_name FROM manufacturer m, product p WHERE m.id = p.manufacturer_id AND p.price>5000;
+
+
+******delete from phpmy admit***** trigger turir maddomme***
+DELETE FROM product WHERE manufacturer_id=OLD.id

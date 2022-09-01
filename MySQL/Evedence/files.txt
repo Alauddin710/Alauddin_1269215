@@ -7,6 +7,7 @@ DELETE FROM product WHERE manufacturer_id=OLD.id
 
 
 view 31
+
 CREATE view product_list_view AS
 Select product.id, product.name,product.price, manufacturer.name FROM product p, manufacturer m WHERE manufacturer.id= product.manufacturer_id
 
@@ -15,3 +16,6 @@ Select p.id, p.name,p.price, m.name FROM product p, manufacturer m WHERE manufac
 
 
 INSERT INTO manufacturer VALUES (NULL, m_name,m_address,m_contact)
+
+****alo****
+CREATE VIEW product_info_view AS SELECT p.id,p.name, p.price, m.name as manufacturer_name FROM manufacturer m, product p WHERE m.id= p.manufacturer_id AND p.price>5000;
