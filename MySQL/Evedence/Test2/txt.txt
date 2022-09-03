@@ -1,0 +1,7 @@
+CREATE VIEW student_results_vies AS
+SELECT stid, stname, stmobile,rmodule_name, rtotal_marks FROM students,results WHERE stid = rstudent_id ORDER BY stname;
+
+
+
+
+INSERT INTO students VALUES(NULL,st_name,st_address,st_mobile)
