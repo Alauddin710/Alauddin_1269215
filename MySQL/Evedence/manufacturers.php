@@ -7,7 +7,7 @@ $db = new mysqli('localhost','root','','wdpf51_exam');
 // delete
 if(isset($_POST['submit'])){
 $id= $_POST['manu_id'];
-$sql= "DELETE FROM manufacturer WHERE id = '$id'";
+$sql= "DELETE FROM manufacturer WHERE id ='$id'";
 $db->query($sql);
 if($db->affected_rows>0){
     echo "Deleted";
