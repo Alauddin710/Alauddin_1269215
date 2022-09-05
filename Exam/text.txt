@@ -1,0 +1,25 @@
+
+
+**** products***
+
+INSERT INTO `products` (`id`, `name`, `price`, `manufacturer_id`) VALUES 
+(NULL, 'Singer TV', '10000', '2'), (NULL, 'Singer Fridge', '10000', '2'),
+(NULL, 'sony TV', '10000', '3'), (NULL, 'Sony Fridge', '10000', '3'),
+(NULL, 'Samsung Tv', '10000', '4'), (NULL, 'Samsung Fridge', '10000', '4'),
+(NULL, 'Nokia ph', '10000', '5'), (NULL, 'Nokina Fridge', '10000', '5'),
+
+**procedur***
+
+CREATE PROCEDURE `add_manufacturer`(IN `m_name` VARCHAR(50), IN `m_address` VARCHAR(100), IN `m_contact` VARCHAR(20)) NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER INSERT INTO manufacturer VALUES(NULL,m_name,m_address,m_contact)
+
+
+***create Tigger***
+
+CREATE TRIGGER `delete_product` AFTER DELETE ON `manufacturer`
+ FOR EACH ROW DELETE FROM products WHERE manufacturer_id=old.id
+
+ ***View Create***
+ 
+CREATE VIEW product_info_view AS SELECT * FROM products WHERE price>5000;
+
+
