@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if(!isset($_SESSION['email'])){
+if(isset($_SESSION['email'])){
   header("Location:dashboard.php");
 }
 ?>
@@ -58,7 +58,7 @@ header("Location:dashboard.php");
 ?>
       <form action="" method="post">
         <div class="input-group mb-3">
-          <input type="email" name="email" class="form-control" placeholder="Email">
+          <input type="email" name="email" value="admin@admin.com" class="form-control" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
