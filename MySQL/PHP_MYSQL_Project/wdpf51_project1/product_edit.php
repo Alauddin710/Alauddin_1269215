@@ -19,8 +19,6 @@
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -70,31 +68,43 @@
                 <h3 class="card-title">New Product Details</h3>
               </div>
               <!-- /.card-header -->
+              
               <?php 
-              if(isset($_POST['save'])){
               include_once ("includes/db_config.php");
+              if(isset($_POST['update'])){
+              
               extract($_POST);
-              $sql = "INSERT INTO products VALUES (NULL,'$product','$details','$price','$thumb','$manufacturer')";
+              $sql = "UPDATE products SET pname='$product',pdetails='$details', pprice='$price', pthumb='$thumb',manu_id='$manufacturer' WHERE pid='$id'"; 
+              
+            // --   (NULL,'$product','$details','$price','$thumb','$manufacturer')";
               $db->query($sql);
               if($db->affected_rows>0){
-                echo "<div class='alert alert-success'> Prodcut Added Successfully</div>";
+                echo "<div class='alert alert-success'> Prodcut Update Successfully</div>";
               }
             }
               ?>
+            <?php 
+              $id= $_GET['id'];
+          
+              $result = $db->query("SELECT * FROM products WHERE pid='$id'");
+              $row= $result->fetch_assoc();
+               $mid= $row['manu_id']
+              ?>
+
               <!-- form start -->
               <form role="form" action="" method="post" >
                 <div class="card-body">
                   <div class="form-group">
                     <label for="productName">Product Name</label>
-                    <input type="text" name="product" class="form-control" id="" placeholder="Enter Product Name">
+                    <input type="text" value="<?php echo $row['pname'] ?>" name="product" class="form-control" id="" placeholder="Enter Product Name">
                   </div>
                   <div class="form-group">
                     <label for="details">Product Details</label>
-                    <textarea name="details" rows="6" class="form-control" id=""></textarea> 
+                    <textarea name="details" rows="6" class="form-control" id=""><?php echo $row['pdetails'] ?></textarea> 
                   </div>
                   <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="text" name="price" class="form-control" id="" placeholder="Enter Price">
+                    <input type="text" value="<?php echo $row['pprice'] ?>" name="price" class="form-control" id="" placeholder="Enter Price">
                   </div>
                   <div class="form-group">
                     <label for="thumb">Product Photo</label>
@@ -120,7 +130,7 @@
                       <?php 
                         while($row = $result->fetch_assoc()){
                       ?>    
-                          <option value="<?php echo $row['m_id']; ?>"><?php echo $row['m_name']; ?></option>
+                          <option value="<?php echo $row['m_id']; ?>" <?php if($mid==$row['m_id']){echo "selected";}?>> <?php echo $row['m_name']; ?></option>
                       <?php } ?>    
                         </select>
                       </div>
@@ -128,9 +138,11 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" name="save" class="btn btn-primary">Submit</button>
+                  <button type="submit" name="update" class="btn btn-primary">Update</button>
                 </div>
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
               </form>
+              
             </div>
             <!-- /.card -->
 
@@ -194,13 +206,5 @@
 
 <!-- PAGE SCRIPTS -->
 <script src="dist/js/pages/dashboard2.js"></script>
-<!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<script>
-  $(function () {
-    // Summernote
-    $('textarea').summernote()
-  })
-</script>
 </body>
 </html>

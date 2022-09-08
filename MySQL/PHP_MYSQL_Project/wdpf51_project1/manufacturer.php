@@ -71,25 +71,25 @@ if(!isset($_SESSION['email'])){
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>Product name</th>
-                  <th>Details</th>
-                  <th>Price</th>
-                  <th>Thumbnail</th>
+                  <th>Manufacture ID</th>
+                  <th>Manufacture name</th>
+                  <th>Manufacture address</th>
+                  <th>Contact</th>
+                  <th>Action</th>
 
                 </tr>
                 </thead>
                 <tbody>
                     <?php include_once("includes/db_config.php");
-                    $sql= "SELECT * FROM products";
+                    $sql= "SELECT * FROM manufacturer";
                     $result = $db->query($sql);
                     while($row = $result->fetch_assoc()){?>
                 <tr>
-                  <td><?php echo $row['pid']; ?></td>
-                  <td><?php echo $row['pname']; ?></td>
-                  <td><?php echo $row['pdetails']; ?></td>
-                  <td><?php echo $row['pprice']; ?></td>
-                  <td><?php echo $row['pthumb']; ?></td>
+                  <td><?php echo $row['m_id']; ?></td>
+                  <td><?php echo $row['m_name']; ?></td>
+                  <td><?php echo $row['m_address']; ?></td>
+                  <td><?php echo $row['m_cotact']; ?></td>
+                
                   <td>
                     <a href="product_edit.php?id=<?php echo $row['pid']; ?>"><i class="fa fa-edit"></i></a> | 
                     <a onclick="return confirm('Are suer want to delete?')" href="product_delete.php?id=<?php echo $row['pid']; ?>"> <i class="fa fa-trash"></i></a>

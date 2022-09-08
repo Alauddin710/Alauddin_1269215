@@ -95,6 +95,7 @@
               </li>
             </ul>
           </li>
+          <!-- Products -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -118,6 +119,31 @@
               </li>
             </ul>
           </li>
+           <!-- Manufacturer -->
+           <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Manufacture
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="products.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All manufacturer</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="product_entry.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>New manufacturer</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+            <!-- UI Elements -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>

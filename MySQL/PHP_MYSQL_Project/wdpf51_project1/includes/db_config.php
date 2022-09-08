@@ -4,6 +4,6 @@ define("USER","root");
 define("PASS","");
 define("DB","wdpf51_project1");
 $db = new mysqli(HOST,USER,PASS,DB);
-
+mysqli_set_charset($db,'utf8')
 
 ?>
