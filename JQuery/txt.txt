@@ -1,0 +1,10 @@
+****10Sep2022****
+ready function
+hide: শুধু হাইড হবে:
+show: shudo show hobe
+toggle: er maddome hide and show 2 tai hobe
+this: this bolte same take kaj korbe
+multiple selector:
+fadeIn:fadeOut:
+all-html: All html hide and show hobe function dara
+text,html,val:
