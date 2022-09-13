@@ -8,3 +8,7 @@ multiple selector:
 fadeIn:fadeOut:
 all-html: All html hide and show hobe function dara
 text,html,val:
+
+*****12Sep2022*****
+ajax_load: ata dara txt file data load hoi
+ajax_get: 
