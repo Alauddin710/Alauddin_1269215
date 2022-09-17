@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>the title</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+$("li").filter(".middle").addClass("selected");
+});
+</script>
+<style>
+.selected { color:red; }
+</style>
+</head>
+<body>
+<div>
+<ul>
+<li class="top">list item 1</li>
+<li class="top">list item 2</li>
+<li class="middle">list item 3</li>
+<li class="middle">list item 4</li>
+<li class="bottom">list item 5</li>
+<li class="bottom">list item 6</li>
+</ul>
+<p class="middle">This is paragraph</p>
+</div>
+</body>
+</html>
