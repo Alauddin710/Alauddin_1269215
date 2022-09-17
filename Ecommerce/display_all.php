@@ -48,9 +48,9 @@ include('functions/common_function.php')
           <a class="nav-link" href="#">Total Price: 100/-</a>
         </li>
       </ul>
-      <form class="d-flex" action="search_product.php" method="get">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-        <input type="submit" value="Search" class="btn btn-outline-light" name="search_data_product">
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
     </div>
   </div>
@@ -84,7 +84,7 @@ include('functions/common_function.php')
       <!-- fetching products -->
       <?php 
       //calling function common.php file theke
-       getproducts();
+      get_all_products();
        get_unique_categories();
        get_unique_brands()
       ?>
@@ -122,9 +122,8 @@ include('functions/common_function.php')
 </div>
 
 <!-- last child -->
-   <div class="bg-info p-3 text-center">
-        <p>All right reserve 0- desing by alo 2022</p>
-    </div>
+    <!-- include footer -->
+  <?php include("./includes/footer.php") ?>
     </div>
     
 
