@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>the title</title>
+<script src="../jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+    
+$(document).ready(function() {
+// $("div").click(function () {
+// var content = $(this).text();
+// $("#result").text( content );
+// });
+$(".myclass").click(function(){
+var content = $(this).text();
+$("h1").text(content);
+})
+});
+</script>
+
+</head>
+<body>
+    <h1></h1>
+    <!-- <p>Click on the square below:</p>
+    <span id="result"> </span>
+    <div id="division" style="background-color:blue;">
+    This is Blue Square!!
+    </div> -->
+    <div class="myclass">Exam is over. We are now free from streach</div>
+    </body>
+    </html>

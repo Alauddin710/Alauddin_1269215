@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>the title</title>
+<script src="../jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+var h = $(".box1").height();
+var w = $(".box1").width();
+var ih = $(".box1").innerHeight();
+var iw = $(".box1").innerWidth();
+var oh = $(".box1").outerHeight();
+var ow = $(".box1").outerWidth();
+h = "Height: " + h + "<br>";
+w = "Width: " + w  + "<br>";
+ih = "InnerHeight: " + ih + "<br>";
+iw = "Innerwidth: " + iw  + "<br>";
+ow = "Outererwidth: " + ow + "<br>";
+oh = "OuterHeight: " + oh + "<br>";
+var output = h + w + ih + iw + ow + oh;
+$(".box2").html(output)
+// alert("Height:" + h + " width: " + w); // get kore pelam
+});
+</script>
+<style>
+.box1{ width:100px; 
+    height:100px; 
+    margin:5px;
+    padding: 10px;
+    border: 15px solid green;
+    background:red; 
+    cursor:pointer; }
+    .box2{
+        border: 1px dotted blue;
+    }
+</style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box1"></div>
+<div class="box2"></div>
+</body>
+</html>
