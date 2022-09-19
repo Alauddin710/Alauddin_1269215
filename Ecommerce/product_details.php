@@ -82,35 +82,12 @@ include('functions/common_function.php')
     <!-- products -->
     <div class="row">
       <!-- fetching products -->
-      <div class="col-md-4">
-        <!-- card -->
-        <div class='card' style='width: 18rem;'>
-          <img src='./images/biryani1.jpg' class='card-img-top' alt='$product_title'>
-          <div class='card-body'>
-            <h5 class='card-title'>$product_title</h5>
-            <p class='card-text'>$product_description.</p>
-            <a href='#' class='btn btn-info'>Add to card</a>
-            <a href='#' class='btn btn-secondary'>view more</a>
-          </div>
-    </div>
-      </div>
-      <div class="col-md-8">
-        <!-- related images -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h4 class="text-center text-info mb-5">Related Products</h4>
-                </div>
-                <div class="col-md-6">
-                <img src='./images/biryani2.jpg' class='card-img-top' alt='$product_title'>
-                </div>
-                <div class="col-md-6">
-                <img src='./images/biryani3.jpg' class='card-img-top' alt='$product_title'>
-                </div>
-            </div>
-      </div>
+     
+     
+     
       <?php 
       //calling function common.php file theke
-      
+      view_details();
        get_unique_categories();
        get_unique_brands()
       ?>

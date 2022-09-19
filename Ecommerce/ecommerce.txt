@@ -1,0 +1,19 @@
+*****Ecommerce****
+Home Page
+Insert products
+View products
+Search products
+Insert Categories 
+View Categores 
+Insert brands 
+View brands 
+products Delete,update,Edit Form
+All orders 
+All payment 
+payment system 
+Total sell
+list user 
+Registraton Form 
+Admin login Form 
+User login Form
+Contact Form 

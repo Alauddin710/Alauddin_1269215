@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+             var h = $(".box1").height();
+             var w = $(".box1").width();
+            // alert("Height: " + h +  " Width: " + w)
+            var ih = $(".box1").innerHeight();
+            var iw = $(".box1").innerWidth();
+            var oh = $(".box1").outerHeight();
+            var ow = $(".box1").outerWidth();
+
+            h = "Height: " + h + "<br>";
+            w = "Width: " + w + "<br>";
+            ih = "Innerheight: " + ih + "<br>";
+            iw = "Innerwidth: " + iw + "<br>";
+            oh = "Outerheight: " + oh + "<br>";
+            ow = "Outerwidth: " + ow + "<br>";
+            var output = h + w + ih + iw + oh + ow;
+            $(".box2").html(output);
+        });
+    </script>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            padding: 10px;
+            border: 5px solid green;
+            cursor: pointer;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
