@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+    <style type="text/css">
+        div
+        {
+        border:1px solid black;
+        float:left;
+        }
+        img
+        {
+        width:180px;
+        height:200px;
+         margin:10px;
+        }
+        </style>
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var images = ['pic1.png', 'pic2.png', 'pic3.png',
+                'pic4.png', 'pic4.png','pic7.png'];
+            var output = '';
+            $.each(images, function (key, value) {
+                output += '<img src="' + value + '" />';
+            });
+            $('#display').html(output);
+            $('img').on('error',function () {
+                $(this).replaceWith('<img src="missing.png"alt="Could not load image">');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+
+</html>
