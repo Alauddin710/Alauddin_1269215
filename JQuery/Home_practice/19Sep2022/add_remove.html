@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add remove</title>
+    <script src="../jquery.min.js"></script>
+
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: 2px solid green;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(106, 0, 255);
+            color: white;
+            border: 2px solid green;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function(){
+                $(".box1").after("<div class='box'>The content box</div>")
+                $(".box").click(function(){
+                    $(this).remove();
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Click on The Square below</p>
+    <div class="box1">This is box1</div>
+    <button class="btn1">Add remove</button>
+    
+</body>
+</html>

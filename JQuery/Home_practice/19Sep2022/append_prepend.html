@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append-prepend</title>
+    <script src="../jquery.min.js"></script>
+    
+    <style>
+        .list{
+            display: inline;
+        }
+    </style>
+    
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function(){
+                $(".list").prepend("<li>item</li>")
+            });
+            $(".btn2").click(function(){
+                $(".list").append("<li>item</li>")
+            })
+           
+
+        });
+    </script>
+    
+</head>
+<body>
+    <p>Click below</p>
+    <ul class="list">
+        <li>Add item</li>
+    </ul>
+  
+    <button class="btn1">before</button>
+    <button class="btn2">after</button>
+</body>
+</html>
