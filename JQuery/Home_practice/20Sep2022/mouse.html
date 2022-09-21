@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        div{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            float: left;
+            font-family: verdana Arial;
+            font-size: 14px;
+        }
+        div#tip{
+            position: absolute;
+            width: 100px;
+            height: auto;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.hoverMe').hover(function(){
+                $('#tip').fadeIn('slow')
+            },
+            function(){
+                $('#tip').fadeOut('slow');
+            }
+            );
+            $('.hoverMe').mousemove(function(e){
+                var topPosition = e.pageY + 5;
+                var leftPosition = e.pageX + 5;
+                $('#tip').css({
+                    top: topPosition + "px",
+                    left: leftPosition + "px",
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="tip" style="display: none">I am a toltip</div>
+    <div class="hoverMe">Hover me for a toltip</div>
+    <div> This div will not display with toltip</div>
+    <div class="hoverMe">Hover me for a toltip</div>
+</body>
+</html>
