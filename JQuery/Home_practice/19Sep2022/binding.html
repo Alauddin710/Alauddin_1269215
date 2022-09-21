@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binding</title>
+    <script src="../jquery.min.js"></script>
+
+    <style>
+        ul{
+            background-color: #dcdcdc;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 250px;
+        }
+        li{
+            cursor: pointer;
+            margin: 10px 0px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $('input:text').on({focus:function(){
+                $(this).val('');
+            },
+            blur:function(){
+                $(this).val('Enter some text')
+            }
+            });
+            $('li').on('click',function(){
+                $(this).css('background-color', 'red');
+            });
+            $('select').on('change', function(){
+                alert('You selected:' + $(this).val());
+            });
+            $('input:button').on('click',function(){
+                $('select').off('change');
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" name="" placeholder="enter name">
+    <ul>
+        <li>India</li>
+        <li>USA</li>
+        <li>Uk</li>
+        <li>France</li>
+    </ul>
+    <select>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Colombo">Colombo</option>
+        <option value="Nepal">Nepal</option>
+        <option value="India">India</option>
+        <option value="Pakistan">Pakistan</option>
+    </select>
+    <input type="button" value="Unbind select box">
+</body>
+</html>

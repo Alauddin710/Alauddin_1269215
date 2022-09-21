@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: red;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: rgb(0, 255, 47);
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".box1").click(function(){
+                var b2 = $(".box2").text()
+               $(this).replaceWith(b2)
+            })
+        });
+    </script>
+</head>
+<body>
+    <p>click on the square below</p>
+    <div class="box1">This box1</div>
+    <div class="box2">This box2</div>
+    
+
+</body>
+</html>

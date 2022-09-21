@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+    <script src="../jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div").click(function(){
+                $(this).replaceWith("<h1>Jquery is greate</h1>")
+            })
+        });
+    </script>
+</head>
+<body>
+    <p>click on the square below</p>
+    <div class="division" style="background-color: blue;">This is blue square</div>
+    
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After Box</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 2px solid rgb(236, 104, 11);
+            padding: 5px;
+            background-color: blue;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 2px solid rgb(236, 104, 11);
+            padding: 5px;
+            background-color: rgb(255, 0, 8);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function(){
+                $(".box1").after("<div class='box'>Content after box1</div>");
+            })
+        });
+    </script>
+
+    <p>Click on The square blue</p>
+    <div class="box1">This is header inside box1</div>
+    <button class="btn1">Add new div</button>
+</body>
+</html>
