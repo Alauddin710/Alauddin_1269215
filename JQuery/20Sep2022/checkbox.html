@@ -21,7 +21,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#handle').click(function () {
-                if ($(this).attr('checked') == true)
+                if (this.checked)
                     $('.toggle').attr('checked', 'true');
                 else
                     $('.toggle').removeAttr('checked');
