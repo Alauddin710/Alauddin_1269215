@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add more</title>
+    <script src="../jquery.min.js"></script>
+    
+    <style>
+        fieldset{
+            width: 450px;
+        }
+        ul{
+            padding: 2px;
+            list-style: none;
+        }
+        label{
+            float: left;
+            width: 100px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#add").click(function(){
+                 var str = '<li>';
+                    str+=' <label>Name</label><input type="text" value="" />';
+                    str+= '<input type="button" value="remove" class="remove" />';
+                    str+='</li>';
+                    $('#sites').append(str);
+                    $('.remove').on('click',function(){
+                        $(this).parent('li').remove();
+                    });
+            })
+        });
+    </script>
+</head>
+<body>
+    <form action="process.php" method="post">
+        <fieldset>
+            <legend>Websites you visit daily</legend>
+            <ul id="sites">
+                <li>
+                    <label >Name:</label>
+                    <input type="text" value="">
+                </li>
+            </ul>
+            <input type="button" id="add" value="Add More">
+        </fieldset>
+    </form>
+</body>
+</html>

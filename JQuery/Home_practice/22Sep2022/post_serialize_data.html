@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sending data through post</title>
+    <script src="../jquery.min.js"></script>
+
+    <style>
+        ul{
+            list-style: none;
+            border: 1px solid black;
+            margin: 0pt;
+            padding: 0pt;
+            float: left;
+            font-family: Verdana,Arial,Helvetica,sans-serif;
+            font-size: 12px;
+            width: 400px;
+        }
+        li{
+            padding: 10px 5px;
+            border-bottom: 1px solid black;
+        }
+        label{
+            width:100px ;
+            text-align:right ;
+            margin-right:10px;
+            float: left;
+        }
+        #response{
+            clear: both;
+            display: none;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('input:button').click(function(){
+                var formdata = $('form:first').serialize();
+                $.post('process.php', formdata,function(data){
+                    $('#information').hide();
+                    $('#response').html(data).show();
+                }
+                );
+            });
+        });
+    </script>
+  </head>
+
+  <body>
+    <form>
+      <ul id="information">
+        <li>
+          <labe>Email:</labe>
+          <input type="text" name="email" />
+        </li>
+        <li>
+          <labe>Full Name:</labe>
+          <input type="text" name="fullName" />
+        </li>
+        <li>
+            <label>Sex</label>
+            <input type="radio" name="sex" value="M">Male
+            <input type="radio" name="sex" value="F">FeMale
+        </li>
+        <li>
+            <label>Country</label>
+            <select name="country">
+                <option value="">Select One</option>
+                <option value="bn">Bangladesh</option>
+                <option value="sr">Srilanka</option>
+                <option value="pk">Pakistan</option>
+            </select>
+        </li>
+        <li>
+            <input type="button" value="GO" name="submit">
+        </li>
+      </ul>
+    </form>
+    <p id="response"></p>
+  </body>
+</html>
