@@ -14,7 +14,7 @@
             $("#batchid").change(function(){
                 var id = $(this).val();
                 $.get('student_list.php',{bid:id},function(data){
-                    $("#show").html(data);
+                    $("#studentid").html(data);
                 });
             });
         });
@@ -32,6 +32,9 @@
             <?php
             }
             ?>
+        </select>
+        <select id="studentid">
+            <option value="" disabled selected>Select One</option>
         </select>
      </form>
      <div id="show"></div>

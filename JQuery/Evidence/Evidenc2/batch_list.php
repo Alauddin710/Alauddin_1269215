@@ -30,11 +30,15 @@
            $result = $db->query($sql);
            while($row= $result->fetch_assoc()){?>
             <option value="<?php echo $row['batch_id']; ?>"> <?php echo $row['batch_name']; ?> </option>
+        
         <?php
            }
            ?>
         </select>
+
+    
     </form>
+
     <br>
     <div id="show"></div>
 </body>
