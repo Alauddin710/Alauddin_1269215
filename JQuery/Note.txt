@@ -1,2 +1,11 @@
 ****22/09/2022***
 serialize: Serialize dara former sob data aksate nia asa jai
+***24/09/2022****
+1.batch list
+2.student list
+2.Login form
+
+***25/09/2022
+1. voting system
+2. email webvalidation
+3. Form validation

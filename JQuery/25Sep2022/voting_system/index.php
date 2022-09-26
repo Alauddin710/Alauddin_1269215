@@ -15,7 +15,7 @@ once per day.';
                 $votes = $unit->getAttribute('votes');
                 $unit->setAttribute('votes', ++$votes);
                 setcookie("voted", true, time() + 10); /* expire
- in 24 hours */
+ in 10second  */
                 break;
             }
         }
@@ -24,6 +24,7 @@ once per day.';
 }
 ?>
 <html>
+
 <head>
     <title></title>
     <style type="text/css">
@@ -31,11 +32,13 @@ once per day.';
             font-family: "Trebuchet MS", verdana;
             width: 350px;
         }
+
         ul {
             list-style: none;
         }
     </style>
 </head>
+
 <body>
     <form method="post">
         <fieldset>
@@ -47,13 +50,12 @@ once per day.';
                 $xpath = new DomXPath($dom);
                 $browsers = $xpath->query('//browser');
                 foreach ($browsers as $browser) {
-                    $checked = $browser->getAttribute('value') ? 'checked' : '';
+                    $checked = isset($_POST['browser']) && $browser->getAttribute('value') ? 'checked' : '';
                     echo '<li><input type="radio" ' . $checked . ' name="browser" value="' . $browser->getAttribute('value') . '">' . $browser->getAttribute('name') . '</li>';
                 }
                 ?>
-                <li style="color:red;"><?php echo $message; ?></li>
-                <li><input type="submit" name="vote" value="vote" /> OR <a href="results.php" id="results">View
-                        Results</a></li>
+                <li style="color:red;"><?= isset($message) ? $message : "" ?></li>
+                <li><input type="submit" name="vote" value="vote" /> OR <a href="results.php" id="results">View Results</a></li>
             </ul>
         </fieldset>
     </form>

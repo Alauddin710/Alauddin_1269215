@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        body{
+            font-family: "Trebuchet Ms",Verdana;
+            width: 450px;
+        }
+        .error{
+            color: red;
+        }
+        #info{
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#check").click(validate);
+            function validate(){
+                var dataValid = true;
+                $("#info").html("");
+                $(".required").each(function(){
+                    var cur = $(this);
+                    cur.next("span").remove();
+                    if($.trim(cur.val())==""){
+                        cur.after('<span class="error">Mandatory field</span>');
+                        dataValid = false;
+                    }
+                });
+                if(dataValid){
+                    $("#info").html("Validation Ok")
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <form action="">
+    <fieldset>
+        <legend><strong>Personal</strong></legend>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" class="required"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" class="required"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td><input type="text" class="required"></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <br>
+    <span id="info"></span>
+    <br>
+    <input type="button" value="Check" id="check">
+</form>
+</body>
+</html>
