@@ -1,0 +1,31 @@
+/*
+Theme Name: alo theme
+Text Domain: alo theme
+Version: 2.0
+Tested up to: 6.0
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: This is first theme.
+Tags: one column
+Author: alo
+Author URI: https://alo.bdprogrammers.com/
+Theme URI: https://alo.bdprogrammers.com/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+.container{
+    margin: 0 auto;
+    width: 1050px;
+}
+.article{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 15px;
+}
