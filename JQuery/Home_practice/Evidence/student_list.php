@@ -1,15 +1,12 @@
 <?php
-
-use LiteSpeed\CLI\Option;
-
- $db = new mysqli("localhost","root","","wdpf51_batch_students");
-
-$id= $_GET['bid'];
-$sql = "SELECT * FROM students WHERE st_batch_id='$id'";
+ $db = new mysqli("localhost","root","","wdpf51_batches");
+$id =  $_GET['bid'];
+$sql = "SELECT * FROM students WHERE stu_batch_id='$id'";
 $result = $db->query($sql);
-echo '<option value="" disabled selected>Select One</option>';
-while($row= $result->fetch_assoc()){
-    echo '<option value=" '.$row['student_id'].'">'. $row ['student_name'] . "</option>";
+echo '<option value="" disabled selected>Select one</option>';
+while($row = $result->fetch_assoc()){
+
+    echo '<option value=" '.$row['stu_id'].' ">'. $row['stu_name'] . "</option>"; 
 }
 ?>
 
